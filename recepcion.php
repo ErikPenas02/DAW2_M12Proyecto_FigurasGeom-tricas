@@ -13,12 +13,13 @@ if(isset($_POST["figuras"])){
         'triangulo' => "./imgs/triangulo.png",
         'rectangulo' => "./imgs/rectangulo.webp"
     ];
-
+    
+    echo "<form action='calcular.php' method='post'>";
     if (array_key_exists($figuraelegida, $imgs)){
         echo "Has elegido: " . htmlspecialchars($figuraelegida) . "<br>";
         echo "<img src='$imgs[$figuraelegida]' alt='' style='width: 250px; height: 250px; margin-top: 10px; margin-bottom: 10px;'><br>";
 
-        echo "<form action='' method='post'>";
+        
         switch ($figuraelegida){
             case 'cuadrao':
                 
