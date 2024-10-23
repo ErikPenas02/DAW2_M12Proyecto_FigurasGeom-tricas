@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura de la ventana del navegador */
+    margin: 0; /* Eliminar margen predeterminado */
+    font-family: Arial, sans-serif; /* Tipografía opcional */
+}
+
+.header {
+    text-align: center; /* Centrar texto en el encabezado */
+    margin-bottom: 20px; /* Espaciado debajo del encabezado */
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Colocar elementos en columna */
+    align-items: center; /* Centrar los elementos del formulario */
+}
+
+.forma, .textoforma {
+    align-items: center;
+    justify-content: center;
+}
+
+.img-circulo{
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.imgs{
+    width: 200px;
+    height: 200px;
+}
+
+select, .submit {
+    margin: 10px 0; /* Espaciado entre los elementos */
+    padding: 8px; /* Espaciado interno */
+}
