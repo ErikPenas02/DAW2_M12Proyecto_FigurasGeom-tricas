@@ -1,6 +1,7 @@
 <?php
 echo "<link rel='stylesheet' href='styles.css'>";
 echo "<script type='text/javascript' src='funciones.js'></script>";
+echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>";
 session_start();
 
 if(isset($_POST["figuras"])){
@@ -23,16 +24,16 @@ if(isset($_POST["figuras"])){
             case 'cuadrao':
                 
                 echo "<label for=''> Para medir el perímetro y el área necesitaremos un lado de la figura (en cm):</label>";
-                echo "<input type='text' name='lado[]' class='ladofig' id='inputCua' onblur='validarInput();'>";
-                echo "<span id='errorCua'></span><br>";
+                echo "<input type='text' name='lado[]' class='ladofig' id='inputCua' onblur='validarInput(this);'>";
+                echo "<span name='inputCua'></span><br>";
                 echo "<input type='submit' name='ladoCuadrado' value='Calcular'>";
                 break;
 
             case 'circulo':
                 
                 echo "<label for=''> Para medir el perímetro y el área necesitaremos el radio del círculo (en cm):</label>";
-                echo "<input type='text' name='lado[]' class='ladofig' id='inputCir' onblur='validarInput();' onkeyup='validarInput();'>";
-                echo "<span id='errorCir'></span><br>";
+                echo "<input type='text' name='lado[]' class='ladofig' id='inputCir' onblur='validarInput(this);' onkeyup='validarInput(this);'>";
+                echo "<span name='inputCir'></span><br>";
                 echo "<input type='submit' name='radioCirculo' value='Calcular'>";
                 
                 break;
@@ -48,8 +49,8 @@ if(isset($_POST["figuras"])){
             case 'rectangulo';
 
                 echo "Para medir el perímetro y el área necesitaremos 2 lados de la figura (en cm):";
-                echo "<input type='text' name='lado[]' class='ladofig' id='inputRec1' onblur='validarInput();' onkeyup='validarInput();'><span id='errorRec1'></span><br>";
-                echo "<input type='text' name='lado[]' class='ladofig' id='inputRec2' onblur='validarInput();' onkeyup='validarInput();'><span id='errorRec2'></span><br>";
+                echo "<input type='text' name='lado[]' class='ladofig' id='inputRec1' onblur='validarInput(this);' onkeyup='validarInput(this);'><span name='inputRec1'></span><br>";
+                echo "<input type='text' name='lado[]' class='ladofig' id='inputRec2' onblur='validarInput(this);' onkeyup='validarInput(this);'><span name='inputRec2'></span><br>";
                 echo "<input type='submit' name='ladoRectangulo' value='Calcular'>";
 
                 break;

@@ -14,11 +14,13 @@ class Circulo extends FiguraGeometrica{
     //CalcularArea y Calcular Perimetro
     function calcularArea(){
         $areaCir =  pi() * pow($this->lado1, 2);
+        $areaCir = round($areaCir, 2);
         return $areaCir;
     }
 
     function calcularPerimetro(){
         $periCir = 2 * pi() * $this->lado1;
+        $periCir = round($periCir, 2);
         return $periCir;
     }
 
@@ -29,7 +31,7 @@ class Circulo extends FiguraGeometrica{
     }
     // Destructor
     function __destruct(){
-        echo "Objeto destruido";
+        echo "";
     }
 
 }

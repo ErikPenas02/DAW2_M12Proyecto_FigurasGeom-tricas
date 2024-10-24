@@ -63,6 +63,11 @@ function validarInputs(event){
     });
 
     if(error){
+        // Swal.fire({
+        //     icon: "error",
+        //     title: "Oops...",
+        //     text: "Something went wrong!",
+        //   });
         event.preventDefault();
     }
 

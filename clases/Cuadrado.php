@@ -29,7 +29,7 @@ class Cuadrado extends FiguraGeometrica{
     }
     // Destructor
     function __destruct(){
-        echo "Objeto destruido";
+        echo "";
     }
 
 }

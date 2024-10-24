@@ -24,9 +24,5 @@
     </div>
     <div class="submit"><input type="submit" value="Elegir"></div>
 </form>
-
-    <?php
-
-    ?>
 </body>
 </html>

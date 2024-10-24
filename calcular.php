@@ -12,13 +12,9 @@ if (isset($_GET['destruir'])) {
     session_destroy();
     header("Location: index.php");
 }
-// if(isset($_POST["lado"])){
+
     $_SESSION["lado"] = $_POST["lado"];
     $lado = $_SESSION["lado"];
-//     if(count($lado) < 3){
-
-//     }
-
 
     $figura = $_SESSION["figura"];
     
@@ -54,4 +50,4 @@ if (isset($_GET['destruir'])) {
         break;
     }
 // }
-echo "<button type='button' onclick='location.href='?destruir=true''></button>";
+echo "<button type='button' onclick=\"location.href='./calcular.php?destruir=true'\">Cerrar Sesión</button><br><br>";

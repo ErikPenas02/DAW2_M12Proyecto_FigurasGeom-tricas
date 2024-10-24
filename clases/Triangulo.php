@@ -36,6 +36,7 @@ class Triangulo extends FiguraGeometrica{
 
         $s = ($a + $b + $c) / 2;
         $areaTri = sqrt($s * ($s - $a) * ($s - $b) * ($s - $c));
+        $areaTri = round($areaTri, 2);
         return $areaTri;
     }
 
@@ -52,7 +53,7 @@ class Triangulo extends FiguraGeometrica{
     
     // Destructor
     function __destruct(){
-        echo "Objeto destruido";
+        echo "";
     }
 
 }
