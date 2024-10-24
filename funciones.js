@@ -35,28 +35,30 @@ function validarInput(){
     lados = document.getElementsByName("lado");
     span = document.getElementsByTagName("span");
 
-    error = true;
+    error = false;
+    contador = 0;
     lados.forEach(lado => {
+        span[contador].textContent = "";
+        span[contador].style.color = "red";
         if(lado.value === ""){
-            span[0].textContent = "Por favor, introduzca un número";
-            span[0].style.color = "red";
-            error = false;
+            span[contador].textContent = "Por favor, introduzca un número";
+            error = true;
         } else{
             if(!(isNaN(lado.value))){
-                error = true;
+                error = false;
                 if (lado.value > 100) {
-                span[0].textContent = "No puede superar los 100cm";
-                error = false;
+                span[contador].textContent = "No puede superar los 100cm";
+                error = true;
                 } else if (lado.value < 1){
-                span[0].textContent = "Introduce un número positivo mayor que 0";
-                error = false;
+                span[contador].textContent = "Introduce un número positivo mayor que 0";
+                error = true;
                 }
             } else {
-                span[0].textContent = "No es un número";
-                error = false;
+                span[lado].textContent = "No es un número";
+                error = true;
             }
         }
-
+        contador++;
     });
 
     if(error){

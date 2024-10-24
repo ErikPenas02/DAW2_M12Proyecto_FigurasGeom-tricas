@@ -13,7 +13,7 @@ if(isset($_POST["figuras"])){
         'triangulo' => "./imgs/triangulo.png",
         'rectangulo' => "./imgs/rectangulo.webp"
     ];
-    echo "<form action='calcular.php' method='post' onsubmit="">";
+    echo "<form action='calcular.php' method='post' onsubmit=''>";
     if (array_key_exists($figuraelegida, $imgs)){
         echo "Has elegido: " . htmlspecialchars($figuraelegida) . "<br>";
         echo "<img src='$imgs[$figuraelegida]' alt='' style='width: 250px; height: 250px; margin-top: 10px; margin-bottom: 10px;'><br>";
@@ -39,16 +39,17 @@ if(isset($_POST["figuras"])){
             case 'triangulo':
 
                 echo "<label for=''> Para medir el perímetro y el área necesitaremos 1 lado (equilátero), 2 (isósceles) o 3 (escaleno) (en cm):</label><br><br>";
-                echo "<input type='text' name='lado' id='inputTri' onblur='validarInput();' onkeyup='validarInput();'><br><input type='number' name='lado' id='inputTri' onblur='validarInput();' onkeyup='validarInput();'><br><input type='number' name='lado' id='inputTri' onblur='validarInput();' onkeyup='validarInput();'><br>";
-                echo "<span id='errorTri'></span><br>";
+                echo "<input type='text' name='lado' id='inputTri' onblur='validarInput();' onkeyup='validarInput();'><span id='errorTri1'></span><br><br>";
+                echo "<input type='text' name='lado' id='inputTri' onblur='validarInput();' onkeyup='validarInput();'><span id='errorTri2'></span><br><br>";
+                echo "<input type='text' name='lado' id='inputTri' onblur='validarInput();' onkeyup='validarInput();'><span id='errorTri3'></span><br><br>";
                 echo "<input type='submit' name='ladoTriangulo' value='Calcular'>";
 
                 break;
             case 'rectangulo';
 
                 echo "Para medir el perímetro y el área necesitaremos 2 lados de la figura (en cm):";
-                echo "<input type='text' name='lado' id='inputRec' onblur='validarInput();' onkeyup='validarInput();'><br><input type='number' name='lado' id='inputRec' onblur='validarInput();' onkeyup='validarInput();'><br>";
-                echo "<span id='errorRec'></span>";
+                echo "<input type='text' name='lado' id='inputRec' onblur='validarInput();' onkeyup='validarInput();'><span id='errorRec1'></span><br>";
+                echo "<input type='text' name='lado' id='inputRec' onblur='validarInput();' onkeyup='validarInput();'><span id='errorRec2'></span><br>";
                 echo "<input type='submit' name='ladoRectangulo' value='Calcular'>";
 
                 break;

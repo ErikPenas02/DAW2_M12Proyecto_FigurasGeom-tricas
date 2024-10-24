@@ -20,7 +20,7 @@ form {
     flex-direction: column; /* Colocar elementos en columna */
     align-items: center; /* Centrar los elementos del formulario */
     background-color: white;
-    padding: 50%;
+    padding: 3%;
     box-shadow: 100%;
     border-radius: 15%;
 }
@@ -33,7 +33,6 @@ form {
 .img-circulo{
     width: 200px;
     height: 200px;
-    margin: 10%;
 }
 
 

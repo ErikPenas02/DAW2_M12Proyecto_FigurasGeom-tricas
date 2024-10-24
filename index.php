@@ -13,7 +13,7 @@
     <div>
         <div class="forma">
             <label for="" class="textoforma">Cuadrado</label><br>
-            <img src="./imgs/cuadrado.webp" alt=""><br>
+            <img src="./imgs/cuadrado.webp" class="img-circulo" alt=""><br>
         </div>
         <select class="form-select form-select-sm" name="figuras" id="figuras" onchange="cambiarFoto();">
             <option value="cuadrao">Cuadrado</option>
