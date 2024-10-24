@@ -1,7 +1,7 @@
 <?php
 
 class Rectangulo extends FiguraGeometrica{
-    private $lado2;    
+    public $lado2;    
     // Constructor
     function __construct($tipoFigura, $lado1, $lado2) {
         // Llama al constructor de la clase padre (FiguraGeometrica).
@@ -33,7 +33,7 @@ class Rectangulo extends FiguraGeometrica{
 
     // toString 
     function __toString(){
-        echo "Area: " . $this->calcularArea() . "<br> Perímetro: " . $this->calcularPerimetro();
+        return "Area: " . $this->calcularArea() . "<br> Perímetro: " . $this->calcularPerimetro();
     }
     // Destructor
     function __destruct(){

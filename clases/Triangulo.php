@@ -1,8 +1,8 @@
 <?php
-
+include_once "Figuras.php";
 class Triangulo extends FiguraGeometrica{
-    private $lado2;
-    private $lado3;    
+    public $lado2;
+    public $lado3;    
     // Constructor
     function __construct($tipoFigura, $lado1, $lado2, $lado3) {
         // Llama al constructor de la clase padre (FiguraGeometrica).
@@ -24,7 +24,7 @@ class Triangulo extends FiguraGeometrica{
     function setLado2($lado2){
         $this->lado2 = $lado2;
     }
-    function setLado2($lado2){
+    function setLado3($lado3){
         $this->lado3 = $lado3;
     }
 
@@ -35,7 +35,7 @@ class Triangulo extends FiguraGeometrica{
         $c = $this->lado3;
 
         $s = ($a + $b + $c) / 2;
-        $areaTri = sqrt($s * ($s - $a) * ($s - $b) * ($s - $c));;
+        $areaTri = sqrt($s * ($s - $a) * ($s - $b) * ($s - $c));
         return $areaTri;
     }
 
@@ -47,8 +47,9 @@ class Triangulo extends FiguraGeometrica{
 
     // toString 
     function __toString(){
-        echo "Area: " . $this->calcularArea() . "<br> Perímetro: " . $this->calcularPerimetro();
+        return "Area: " . $this->calcularArea() . "<br> Perímetro: " . $this->calcularPerimetro();
     }
+    
     // Destructor
     function __destruct(){
         echo "Objeto destruido";

@@ -31,8 +31,9 @@ function validarIndex(event) {
     return true;
 }
 
-function validarInput(){
-    lados = document.getElementsByName("lado");
+function validarInputs(event){
+    
+    lados = document.getElementsByName("lado[]");
     span = document.getElementsByTagName("span");
 
     error = false;
@@ -40,12 +41,12 @@ function validarInput(){
     lados.forEach(lado => {
         span[contador].textContent = "";
         span[contador].style.color = "red";
+
         if(lado.value === ""){
             span[contador].textContent = "Por favor, introduzca un número";
             error = true;
         } else{
             if(!(isNaN(lado.value))){
-                error = false;
                 if (lado.value > 100) {
                 span[contador].textContent = "No puede superar los 100cm";
                 error = true;
@@ -54,7 +55,7 @@ function validarInput(){
                 error = true;
                 }
             } else {
-                span[lado].textContent = "No es un número";
+                span[contador].textContent = "No es un número";
                 error = true;
             }
         }
@@ -62,27 +63,27 @@ function validarInput(){
     });
 
     if(error){
-        
-    }else {
-        
+        event.preventDefault();
     }
-    
-    
-    
-    // if(lados.length = 2){
-        
-    //     lados.forEach(lado => {
-    //         if(!(typeof lado == "number")){
-    //             span.textContent = "Número no válido"
-    //         }else if (lado > 100) {
-    //             span.textContent = "No puede superar los 100cm"
-    //         } else if (lado < 1){
-    //             span.textContent = "Introduce un número positivo mayor a 0"
-    //         }
-    //     });
-        
-    // }
 
+}
 
+function validarInput(input){
+    span = document.getElementsByName(input.id)
+    span[0].textContent = "";
+    span[0].style.color = "red";
 
+    if(input.value === ""){
+        span[0].textContent = "Por favor, introduzca un número";
+    } else{
+        if(!(isNaN(input.value))){
+            if (input.value > 100) {
+            span[0].textContent = "No puede superar los 100cm";
+            } else if (input.value < 1){
+            span[0].textContent = "Introduce un número positivo mayor que 0";
+            }
+        } else {
+            span[0].textContent = "No es un número";
+        }
+    }
 }

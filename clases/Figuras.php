@@ -1,8 +1,8 @@
 <?php
 
 class FiguraGeometrica{
-    private $tipoFigura;
-    private $lado1;
+    public $tipoFigura;
+    public $lado1;
     
     // Constructor
     function __construct($tipoFigura, $lado1){
