@@ -48,10 +48,10 @@ function validarInputs(event){
         } else{
             if(!(isNaN(lado.value))){
                 if (lado.value > 100) {
-                span[contador].textContent = "No puede superar los 100cm";
+                span[contador].textContent = "No puede superar 100";
                 error = true;
                 } else if (lado.value < 1){
-                span[contador].textContent = "Introduce un número positivo mayor que 0";
+                span[contador].textContent = "Introduce un número positivo (mayor que 0)";
                 error = true;
                 }
             } else {

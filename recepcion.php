@@ -24,7 +24,7 @@ if(isset($_POST["figuras"])){
             case 'cuadrao':
                 
                 echo "<label for=''> Para medir el perímetro y el área necesitaremos un lado de la figura (en cm):</label>";
-                echo "<input type='text' name='lado[]' class='ladofig' id='inputCua' onblur='validarInput(this);'>";
+                echo "<input type='text' name='lado[]' class='ladofig' id='inputCua' onblur='validarInput(this);' onkeyup='validarInput(this);'>";
                 echo "<span name='inputCua'></span><br>";
                 echo "<input type='submit' name='ladoCuadrado' value='Calcular'>";
                 break;
