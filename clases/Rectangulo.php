@@ -15,8 +15,8 @@ class Rectangulo extends FiguraGeometrica{
     }
 
     // Setters
-    function setPrecio($lado2){
-        $this->precioProducto = $lado2;
+    function setLado2($lado2){
+        $this->lado2 = $lado2;
     }
 
     //CalcularArea y Calcular Perimetro
